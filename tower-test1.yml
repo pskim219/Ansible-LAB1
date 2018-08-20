@@ -1,0 +1,10 @@
+---
+  - name: configure httpd
+    yum:
+      name: httpd
+      state: latest
+
+  - name: start httpd
+    service: httpd
+    state: started
+    
