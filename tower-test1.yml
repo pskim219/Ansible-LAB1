@@ -1,10 +1,11 @@
 ---
-  - name: configure httpd
-    yum:
-      name: httpd
-      state: latest
+- name: test
+  task:
+    - name: configure httpd
+      yum:
+        name: httpd
+        state: latest
 
-  - name: start httpd
-    service: httpd
-    state: started
-    
+    - name: start httpd
+      service: httpd
+      state: started
