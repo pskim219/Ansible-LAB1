@@ -2,6 +2,7 @@
   - name: Install httpd
     tasks:
       - name: install httpd
-        service:
+        yum:
           name: httpd
-          state: started
+          state: latest
+          
