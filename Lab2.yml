@@ -1,0 +1,8 @@
+---
+- name: Copnfigure Web server
+  hosts: Web
+  vars:
+    rule: http
+  tasks:
+    - name: include variable from the YAML file
+      include_vars: vars/variables.YAML

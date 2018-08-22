@@ -1,0 +1,20 @@
+---
+  - name: Webservice
+    hosts: web
+
+    tasks:
+      - name: Install and start Apache HTTPD
+        yum:
+          name: httpd
+          state: present
+
+      - name: copy index.html
+        copy:
+          src: /home/pskim711/test/files/index.html
+          dest: /var/www/html/index.html
+
+      - name: Httpp is started
+        service:
+          name: httpd
+          state: started
+          enabled: true
